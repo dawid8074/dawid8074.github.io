@@ -2,7 +2,7 @@
 var cacheName = 'hello-pwa';
 var filesToCache = [
   '/',
-  '/kolumny_wiersze.html',
+  '/index.html',
 ];
 
 /* Start the service worker and cache all of the app's content */
