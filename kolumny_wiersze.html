@@ -1,0 +1,221 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .item {
+          text-align: center;
+        }
+        .item:nth-child(1) {
+          grid-column: 1 / span 2;
+          grid-row: 1;
+        }
+        .item:nth-child(2) {
+          grid-column: 1 / span 1;
+          grid-row: 2;
+        }
+        .item:nth-child(3) {
+          grid-column: 2;
+          grid-row: 2;
+        }
+        .item:nth-child(4) {
+          grid-column: 1;
+          grid-row: 3;
+        }
+        .item:nth-child(5) {
+          grid-column: 2;
+          grid-row: 3;
+        } 
+        .item:nth-child(6) {
+          grid-column: 1 / span 2;
+          grid-row: 4;
+        } 
+        .item:nth-child(7) {
+          grid-column: 1 / span 2;
+          grid-row: 5;
+        } 
+        .item:nth-child(8) {
+          grid-column: 1 / span 2;
+          grid-row: 6;
+        } 
+        @media only screen and (min-width:520px) 
+            and (max-width:900px)
+        {
+            
+            .item:nth-child(6) {
+                grid-column: 1 ;
+                grid-row: 4;
+            } 
+            .item:nth-child(7) {
+                grid-column: 2;
+                grid-row: 4;
+            }   
+            /* .item:nth-child(8) {
+                grid-column: 1 / span 2;
+                grid-row: 6;
+            }  */
+        }
+        @media only screen and (max-width:520px)
+        {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .item:nth-child(1) {
+                grid-column: 1 / span 4;
+                grid-row: 1;
+            }
+            .item:nth-child(2) {
+                grid-column: 1 ;
+                grid-row: 2;
+            }
+            .item:nth-child(3) {
+                grid-column: 2;
+                grid-row: 2;
+            }
+            .item:nth-child(4) {
+                grid-column: 3;
+                grid-row: 2;
+            }
+            .item:nth-child(5) {
+                grid-column: 4;
+                grid-row: 2;
+            }
+            .item:nth-child(6) {
+                grid-column: 1 /span 2;
+                grid-row: 3;
+            } 
+            .item:nth-child(7) {
+                grid-column: 3 /span 2;
+                grid-row: 3;
+            } 
+            .item:nth-child(8) {
+                grid-column: 1 /span 4;
+                grid-row: 4;
+            } 
+
+
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Element A</div>
+        <div class="item">Element B</div>
+        <div class="item">Element C</div>
+        <div class="item">Element D</div>
+        <div class="item">Element E</div>
+        <div class="item">Element F</div>
+        <div class="item">Element G</div>
+        <div class="item">Element H</div>
+    </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/hello-icon-152.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Hello World">
+    <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "a a"
+                "b c"
+                "d e"
+                "f f"
+                "g g"
+                "h h";
+        }
+
+        .item {
+            text-align: center;
+        }
+
+        .item:nth-child(1) {
+            grid-area: a;
+        }
+
+        .item:nth-child(2) {
+            grid-area: b;
+        }
+
+        .item:nth-child(3) {
+            grid-area: c;
+        }
+
+        .item:nth-child(4) {
+            grid-area: d;
+        }
+
+        .item:nth-child(5) {
+            grid-area: e;
+        }
+
+        .item:nth-child(6) {
+            grid-area: f;
+        }
+
+        .item:nth-child(7) {
+            grid-area: g;
+        }
+
+        .item:nth-child(8) {
+            grid-area: h;
+        }
+
+        @media only screen and (min-width: 520px) and (max-width: 900px) {
+            .container {
+                grid-template-areas:
+                    "a a"
+                    "b c"
+                    "d e"
+                    "f g"
+                    "h h";
+            }
+        }
+
+        @media only screen and (max-width: 520px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas:
+                    "a a a a"
+                    "b c d e"
+                    "f f g g"
+                    "h h h h";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Element A</div>
+        <div class="item">Element B</div>
+        <div class="item">Element C</div>
+        <div class="item">Element D</div>
+        <div class="item">Element E</div>
+        <div class="item">Element F</div>
+        <div class="item">Element G</div>
+        <div class="item">Element H</div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+ 
